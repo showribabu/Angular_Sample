@@ -1,0 +1,19 @@
+
+<nav class="navbar bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" [routerLink]="['/']">
+      <img src="../assets/home_icon.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
+      Homes
+    </a>
+  </div>
+</nav>
+
+<div class="container row col-4  mt-3">
+  <form class="d-flex" role="search">
+    <input class="form-control me-2" type="text" placeholder="Filter by city" aria-label="Search" #filter>
+    <button class="btn btn-outline-success" type="button" (click)="filterResult(filter.value)">Search</button>
+  </form>
+</div>
+
+
+<app-housing-location [filteredhoselocationdata]="filteredhoselocationdata"></app-housing-location>
